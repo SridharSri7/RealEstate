@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Lumen Estates — Modern Luxury Real Estate</title>
+<meta name="description" content="Discover handpicked luxury homes, modern apartments and architectural villas with Lumen Estates."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/home.css"/>
+<link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+<!-- NAVBAR -->
+<header class="nav">
+  <div class="container nav-container">
+
+    <!-- LOGO -->
+    <a href="#" class="logo">
+      <img src="images/logo.png" alt="Lumen Estates">
+    </a>
+
+    <!-- NAVIGATION -->
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="discover.html">Discover</a>
+      <a href="agents.html">Agents</a>
+      <a href="stories.html">Stories</a>
+      <a href="contact.html">Contact</a>
+
+      <!-- Mobile Only CTA -->
+      <a class="mobile-tour-btn" onclick="openPopup()">Book a Tour</a>
+    </nav>
+
+    <!-- DESKTOP ACTIONS -->
+    <div class="nav-actions">
+      <a onclick="openPopup()" class="signin-btn">Sign In</a>
+      <a onclick="openPopup()" class="tour-btn">Book a Tour</a>
+    </div>
+
+    <!-- MOBILE TOGGLE -->
+    <button class="menu-toggle" id="menuToggle">
+      ☰
+    </button>
+
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="container hero__inner">
+    <div class="hero__copy" data-reveal>
+      <span class="eyebrow reveal-left">★ Trusted by 12,000+ homeowners</span>
+      <h1 class="reveal-right delay-1">Find a home<br/>that feels like <em>forever</em>.</h1>
+      <p class="lede reveal-left delay-2">Curated luxury residences, modern city lofts and architectural retreats — handpicked by our team of design-led brokers.</p>
+      <div class="hero__actions reveal-bottom delay-3">
+        <a href="listings.html" class="btn btn--primary">Browse listings</a>
+        <a href="about.html" class="btn btn--outline">Our story</a>
+      </div>
+      <div class="hero__stats reveal-top delay-4">
+        <div><strong>1.2k+</strong><span>Active listings</span></div>
+        <div><strong>98%</strong><span>Client satisfaction</span></div>
+        <div><strong>40+</strong><span>Cities covered</span></div>
+      </div>
+    </div>
+    <div class="hero__card reveal-scale delay-2" data-reveal>
+      <div class="hero__card-img"></div>
+      <div class="hero__card-body">
+        <span class="tag">Featured</span>
+        <h3>The Glass Pavilion</h3>
+        <p class="muted">Beverly Hills, California</p>
+        <div class="hero__card-meta"><span>5 Beds</span><span>6 Baths</span><span>8,200 sqft</span></div>
+        <div class="hero__card-foot"><strong>$12,400,000</strong><a href="listings.html" class="btn btn--ghost">View →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="logos">
+  <div class="container logos__row">
+    <span>Forbes</span><span>Architectural Digest</span><span>Dwell</span><span>WSJ</span><span>Bloomberg</span><span>Elle Decor</span>
+  </div>
+</section>
+
+<section class="section" data-reveal>
+  <div class="container">
+    <div class="section__head">
+      <div><span class="eyebrow">Discover</span><h2>Live where life happens.</h2></div>
+      <p class="muted max-w">From oceanfront villas to skyline penthouses — explore residences curated by lifestyle.</p>
+    </div>
+    <div class="cats">
+      <a class="cat cat--lg reveal-left" href="listings.html"><div class="cat__img cat--1"></div><div class="cat__body"><h3>Beachfront</h3><span>184 homes</span></div></a>
+      <a class="cat reveal-bottom delay-1" href="listings.html"><div class="cat__img cat--2"></div><div class="cat__body"><h3>City Lofts</h3><span>312 homes</span></div></a>
+      <a class="cat reveal-right delay-2" href="listings.html"><div class="cat__img cat--3"></div><div class="cat__body"><h3>Countryside</h3><span>96 homes</span></div></a>
+      <a class="cat reveal-top delay-3" href="listings.html"><div class="cat__img cat--4"></div><div class="cat__body"><h3>Mountain</h3><span>72 homes</span></div></a>
+      <a class="cat cat--lg reveal-scale delay-4" href="listings.html"><div class="cat__img cat--5"></div><div class="cat__body"><h3>Architectural</h3><span>148 homes</span></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="section cta" data-reveal>
+  <div class="container cta__inner">
+    <div>
+      <span class="eyebrow reveal-left">Ready when you are</span>
+      <h2 class="reveal-right delay-1">Let's find your next chapter.</h2>
+      <p class="muted reveal-bottom delay-2">A senior advisor will reach out within 24 hours.</p>
+    </div>
+    <a href="contact.html" class="btn btn--primary reveal-scale delay-3">Get in touch</a>
+  </div>
+</section>
+
+<!-- PREMIUM VILLAS -->
+<section class="collections">
+  <div class="container">
+
+    <div class="section-head">
+      <span class="eyebrow">Exclusive Collections</span>
+      <h2>Crafted for Extraordinary Living</h2>
+      <p>
+        From iconic penthouses overlooking city skylines to secluded waterfront
+        estates, discover residences that redefine luxury, comfort, and prestige.
+      </p>
+    </div>
+
+    <!-- 1 -->
+    <div class="collection-card reveal-left">
+      <div class="collection-image">
+        <img src="images/villa.jpg" alt="Signature Villas">
+      </div>
+      <div class="collection-content">
+        <span class="number">01</span>
+        <h3>Signature Villas</h3>
+        <p>
+          Experience architectural excellence with expansive private estates
+          designed for refined living.
+        </p>
+
+        <ul>
+          <li>Private Infinity Pools</li>
+          <li>Landscaped Gardens</li>
+          <li>Smart Home Integration</li>
+          <li>Premium Imported Finishes</li>
+        </ul>
+
+        <a href="#" class="lux-btn">Explore Collection</a>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="collection-card reverse reveal-right">
+      <div class="collection-image">
+        <img src="images/penthouse.jpg" alt="Sky Penthouses">
+      </div>
+      <div class="collection-content">
+        <span class="number">02</span>
+        <h3>Sky Penthouse Residences</h3>
+        <p>
+          Elevated homes offering breathtaking views and unmatched sophistication.
+        </p>
+
+        <ul>
+          <li>Panoramic Skyline Views</li>
+          <li>Private Rooftop Lounges</li>
+          <li>Concierge Services</li>
+          <li>Designer Interiors</li>
+        </ul>
+
+        <a href="#" class="lux-btn">Explore Collection</a>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="collection-card reveal-left">
+      <div class="collection-image">
+        <img src="images/waterfront.jpg" alt="Waterfront Estates">
+      </div>
+      <div class="collection-content">
+        <span class="number">03</span>
+        <h3>Waterfront Estates</h3>
+        <p>
+          Exceptional homes positioned along pristine coastlines, lakes and marinas.
+        </p>
+
+        <ul>
+          <li>Private Beach Access</li>
+          <li>Oceanfront Views</li>
+          <li>Yacht Facilities</li>
+          <li>Resort-Inspired Amenities</li>
+        </ul>
+
+        <a href="#" class="lux-btn">Explore Collection</a>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="collection-card reverse reveal-right">
+      <div class="collection-image">
+        <img src="images/architectural.jpg" alt="Architectural Icons">
+      </div>
+      <div class="collection-content">
+        <span class="number">04</span>
+        <h3>Architectural Icons</h3>
+        <p>
+          A curated collection of award-winning homes designed by renowned architects.
+        </p>
+
+        <ul>
+          <li>Contemporary Masterpieces</li>
+          <li>Sustainable Luxury Design</li>
+          <li>Bespoke Craftsmanship</li>
+          <li>Exceptional Investment Value</li>
+        </ul>
+
+        <a href="#" class="lux-btn">Explore Collection</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why-us">
+  <div class="container">
+
+    <div class="section-title reveal top">
+      <span class="subtitle">Why Choose Us</span>
+      <h2>Redefining Luxury Real Estate Experiences</h2>
+      <p>
+        We deliver curated properties, expert guidance, and seamless service
+        designed for high-end lifestyles.
+      </p>
+    </div>
+
+    <div class="why-grid">
+
+      <div class="why-card reveal left">
+        <div class="icon">✦</div>
+        <h3>Exclusive Listings</h3>
+        <p>Access off-market luxury homes and premium curated properties.</p>
+      </div>
+
+      <div class="why-card reveal top">
+        <div class="icon">◆</div>
+        <h3>Expert Advisors</h3>
+        <p>Professional consultants guiding your investment decisions.</p>
+      </div>
+
+      <div class="why-card reveal right">
+        <div class="icon">◈</div>
+        <h3>Prime Locations</h3>
+        <p>Properties in elite neighborhoods and high-growth zones.</p>
+      </div>
+
+      <div class="why-card reveal bottom">
+        <div class="icon">✧</div>
+        <h3>Personalized Service</h3>
+        <p>Tailored property matches based on your lifestyle needs.</p>
+      </div>
+
+      <div class="why-card reveal left">
+        <div class="icon">⬢</div>
+        <h3>Trusted Expertise</h3>
+        <p>Years of proven success in luxury real estate markets.</p>
+      </div>
+
+      <div class="why-card reveal right">
+        <div class="icon">✦</div>
+        <h3>End-to-End Support</h3>
+        <p>We handle everything from search to final ownership.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- VIRTUAL PROPERTY TOURS -->
+<section class="virtual-tours">
+  <div class="container">
+
+    <!-- HEADING SPLIT -->
+    <div class="section-title">
+
+      <span class="subtitle reveal-left">Virtual Experience</span>
+
+      <h2>
+        <span class="reveal-top">Explore Properties</span>
+        <span class="reveal-right">Like You’re There</span>
+      </h2>
+
+      <p class="reveal-bottom">
+        Step inside luxury homes through immersive 360° tours, cinematic walkthroughs,
+        and high-definition aerial views.
+      </p>
+
+    </div>
+
+    <!-- GRID -->
+    <div class="tour-grid">
+
+      <div class="tour-card reveal-left">
+        <div class="tour-img">
+          <img src="images/tour1.jpg" />
+          <div class="overlay">360° Tour</div>
+        </div>
+        <div class="tour-content">
+          <h3>Interactive 360° Walkthrough</h3>
+          <p>Full immersive control to explore every detail of luxury interiors.</p>
+        </div>
+      </div>
+
+      <div class="tour-card reveal-top">
+        <div class="tour-img">
+          <img src="images/tour2.jpg" />
+          <div class="overlay">Aerial View</div>
+        </div>
+        <div class="tour-content">
+          <h3>Drone Aerial Views</h3>
+          <p>Experience estates and landscapes from cinematic sky perspectives.</p>
+        </div>
+      </div>
+
+      <div class="tour-card reveal-right">
+        <div class="tour-img">
+          <img src="images/tour3.jpg" />
+          <div class="overlay">Interior</div>
+        </div>
+        <div class="tour-content">
+          <h3>Cinematic Interior Tour</h3>
+          <p>High-definition walkthroughs showcasing architecture and design.</p>
+        </div>
+      </div>
+
+      <div class="tour-card reveal-bottom">
+        <div class="tour-img">
+          <img src="images/tour4.jpg" />
+          <div class="overlay">Plans</div>
+        </div>
+        <div class="tour-content">
+          <h3>Interactive Floor Plans</h3>
+          <p>Understand layout flow with detailed interactive blueprints.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- EMI CALCULATOR -->
+<section class="finance">
+  <div class="container">
+
+    <!-- HEADING -->
+    <div class="section-title">
+
+      <span class="subtitle reveal-left">Mortgage & Financing</span>
+
+      <h2>
+        <span class="reveal-top">Flexible Financing</span>
+        <span class="reveal-right">For Luxury Living</span>
+      </h2>
+
+      <p class="reveal-bottom">
+        We partner with leading financial institutions to offer tailored mortgage solutions,
+        helping you secure your dream property with ease and confidence.
+      </p>
+
+    </div>
+
+    <!-- GRID -->
+    <div class="finance-grid">
+
+      <div class="finance-card reveal-left">
+        <div class="icon">💰</div>
+        <h3>Home Loan Assistance</h3>
+        <p>Get expert guidance on securing the best mortgage rates and approvals.</p>
+      </div>
+
+      <div class="finance-card reveal-top">
+        <div class="icon">📊</div>
+        <h3>EMI Planning</h3>
+        <p>Calculate and structure your monthly payments with smart financial planning tools.</p>
+      </div>
+
+      <div class="finance-card reveal-right">
+        <div class="icon">🏦</div>
+        <h3>Bank Partnerships</h3>
+        <p>We collaborate with top banks for faster approvals and lower interest rates.</p>
+      </div>
+
+      <div class="finance-card reveal-bottom">
+        <div class="icon">📑</div>
+        <h3>Documentation Support</h3>
+        <p>Hassle-free paperwork assistance for a smooth buying experience.</p>
+      </div>
+
+    </div>
+
+    <!-- EMI CALCULATOR SECTION -->
+    <div class="emi-box reveal-bottom">
+
+      <h3>Quick EMI Estimate</h3>
+
+      <div class="emi-grid">
+        <input type="number" placeholder="Loan Amount">
+        <input type="number" placeholder="Interest Rate (%)">
+        <input type="number" placeholder="Tenure (Years)">
+      </div>
+
+      <button class="lux-btn">Calculate EMI</button>
+
+      <p class="note">*This is an estimated calculation for guidance only.</p>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="lux-footer">
+  <div class="container">
+
+    <!-- TOP CTA -->
+    <div class="footer-cta reveal-top">
+      <h2>Find Your Dream Property Today</h2>
+      <p>Luxury homes, exclusive listings, and personalized real estate guidance.</p>
+      <div class="cta-buttons">
+        <a href="#" class="lux-btn">Explore Properties</a>
+        <a href="#" class="lux-btn outline">Contact Agent</a>
+      </div>
+    </div>
+
+    <!-- GRID -->
+    <div class="footer-grid">
+
+      <!-- BRAND -->
+      <div class="footer-col reveal-left">
+        <h3 class="brand">Lumen Estates</h3>
+        <p>
+          A premium real estate platform offering curated luxury properties,
+          investment opportunities, and world-class service.
+        </p>
+
+        <div class="socials">
+          <span>Follow Us</span>
+          <div class="icons">
+            <a href="#">★</a>
+            <a href="#">◆</a>
+            <a href="#">✦</a>
+            <a href="#">◈</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- LINKS -->
+      <div class="footer-col reveal-top">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Properties</a></li>
+          <li><a href="#">Virtual Tours</a></li>
+          <li><a href="#">Agents</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- SERVICES -->
+      <div class="footer-col reveal-right">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="#">Buying Assistance</a></li>
+          <li><a href="#">Selling Properties</a></li>
+          <li><a href="#">Property Valuation</a></li>
+          <li><a href="#">Investment Advisory</a></li>
+          <li><a href="#">Mortgage Support</a></li>
+        </ul>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="footer-col reveal-bottom">
+        <h3>Contact</h3>
+        <ul class="contact-info">
+          <li>📍 Tuticorin, Tamil Nadu</li>
+          <li>📞 +91 98765 43210</li>
+          <li>📧 info@lumenestates.com</li>
+          <li>🕒 Mon - Sat: 9AM - 7PM</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="newsletter reveal-bottom">
+      <h3>Stay Updated</h3>
+      <p>Get latest luxury listings and market insights.</p>
+
+      <div class="newsletter-box">
+        <input type="email" placeholder="Enter your email">
+        <button>Subscribe</button>
+      </div>
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="footer-bottom">
+      <p>© 2026 Lumen Estates. All rights reserved.</p>
+      <div class="bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<!--  -->
+<!-- ================= AUTH POPUP ================= -->
+
+<div id="popupOverlay" class="popup-overlay">
+
+  <div class="popup-container">
+
+    <!-- CLOSE BUTTON -->
+    <span class="popup-close" onclick="closePopup()">
+      &times;
+    </span>
+
+    <!-- LEFT SIDE -->
+    <div class="popup-left">
+
+      <h1>Welcome 👋</h1>
+
+      <p>
+        Access your dashboard, analytics,
+        projects and management system.
+      </p>
+
+      <div class="popup-feature-list">
+
+        <div class="popup-feature-card">
+          📊 Real-time Analytics
+        </div>
+
+        <div class="popup-feature-card">
+          ⚡ Fast Dashboard
+        </div>
+
+        <div class="popup-feature-card">
+          🔒 Secure Authentication
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="popup-right">
+
+      <!-- LOGIN -->
+      <div id="loginForm" class="popup-login-box">
+
+        <h2>Login</h2>
+
+        <span>
+          Access your account
+        </span>
+
+        <input
+          id="loginEmail"
+          type="email"
+          placeholder="Enter Email"
+        >
+
+        <div class="password-wrap">
+            <input id="loginPassword" type="password" placeholder="Enter Password">
+            <span class="eye-btn" onclick="togglePassword('loginPassword',this)">👁</span>
+        </div>
+        <small id="passwordHint" class="hint-text"> </small>
+
+        <!-- FORGOT PASSWORD -->
+        <p class="popup-forgot">
+          <a href="error.html" onclick="forgotPassword()">Forgot Password?</a>
+        </p>
+
+        <select id="loginRole">
+
+          <option value="user">
+            User
+          </option>
+
+          <option value="admin">
+            Admin
+          </option>
+
+        </select>
+
+        <button onclick="login()">
+          Login
+        </button>
+
+        <p class="popup-switch">
+
+          Don't have an account?
+
+          <span onclick="showSignup()">
+            Signup
+          </span>
+
+        </p>
+
+      </div>
+
+      <!-- SIGNUP -->
+       <!-- ================= SIGNUP FORM ================= -->
+<div id="signupForm" class="popup-signup-box hidden">
+
+  <h2 class="signup-h2">Create Account</h2>
+  <span>Create your new account</span>
+
+  <!-- ROLE SELECTION (AVATAR STYLE) -->
+  <div class="role-selector">
+
+    <div id="userRoleCard" class="role-card active" onclick="selectRole('user')">
+      <div class="avatar">👤</div>
+      <p>User</p>
+    </div>
+
+    <div id="adminRoleCard" class="role-card" onclick="selectRole('admin')">
+      <div class="avatar">🛡️</div>
+      <p>Admin</p>
+    </div>
+
+  </div>
+
+  <!-- INPUTS -->
+  <input id="signupName" type="text" placeholder="Enter Name">
+  <input id="signupEmail" type="email" placeholder="Enter Email">
+  <div class="password-wrap">
+    <input id="signupPassword" type="password" placeholder="Enter Password">
+    <span class="eye-btn" onclick="togglePassword('signupPassword',this)">👁</span>
+  </div>
+  <div class="password-wrap">
+    <input id="signupConfirmPassword" type="password" placeholder="Confirm Password">
+    <span class="eye-btn" onclick="togglePassword('signupConfirmPassword',this)">👁</span>
+  </div>
+
+  <!-- HIDDEN ROLE -->
+  <select id="signupRole" style="display:none;">
+    <option value="user">User</option>
+    <option value="admin">Admin</option>
+  </select>
+
+  <!-- ERROR MESSAGE -->
+  <p id="signupError" class="error-text"></p>
+
+  <!-- BUTTON -->
+  <button onclick="signup()">Create Account</button>
+
+  <!-- SWITCH -->
+  <p class="popup-switch signup-login">
+    Already have an account?
+    <span onclick="showLogin()">Login</span>
+  </p>
+
+</div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="js/home.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>
