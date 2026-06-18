@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Dashboard</title>
+<link rel="stylesheet" href="css/user-dashboard.css">
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <div class="sidebar-logo" onclick="window.location.href='dashboarderror.html'">
+      <img src="images/logo-stackly (1).webp" alt="Stackly Logo">
+    </div>
+
+        <a href="#" onclick="showSection('overview')">Overview</a>
+        <a href="#" onclick="showSection('portfolio')">Explore Properties</a>
+        <a href="#" onclick="showSection('markets')">Saved Properties</a>
+        <a href="#" onclick="showSection('watchlist')">Appointments</a>
+        <!-- <a href="#" onclick="showSection('transactions')">Transactions</a> -->
+        <!-- <a href="#" onclick="showSection('settings')">Mortgage & Financing</a> -->
+        <a href="#" onclick="showSection('profile')">Profile</a>
+
+    <button class="logout-btn" onclick="logout()">
+        <span>🚪</span> Logout
+    </button>
+    
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+<!-- OVERVIEW -->
+
+<div class="content active" id="overview">
+
+<div class="dashboard-home">
+
+  <!-- WELCOME -->
+  <section class="welcome-banner">
+    <div>
+      <span class="welcome-tag">Luxury Client Portal</span>
+      <h1 class="reveal-top">Welcome Back, Sir 👋</h1>
+      <p class="reveal-left">
+        Discover exclusive properties, monitor inquiries,
+        and manage your luxury real estate journey.
+      </p>
+    </div>
+
+    <div class="quick-actions reveal-bottom">
+      <button>Explore Properties</button>
+      <button>Book Tour</button>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-grid">
+
+    <div class="stat-card pop-card">
+      <h3>125</h3>
+      <p>Properties Viewed</p>
+    </div>
+
+    <div class="stat-card pop-card delay-1">
+      <h3>18</h3>
+      <p>Saved Properties</p>
+    </div>
+
+    <div class="stat-card pop-card delay-2">
+      <h3>6</h3>
+      <p>Active Inquiries</p>
+    </div>
+
+    <div class="stat-card pop-card delay-3">
+      <h3>3</h3>
+      <p>Upcoming Tours</p>
+    </div>
+
+  </section>
+
+  <!-- FEATURED PROPERTY -->
+  <section class="featured-property">
+
+    <div class="featured-image reveal-left">
+      <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200" alt="">
+    </div>
+
+    <div class="featured-content reveal-right">
+
+      <span>Property of the Week</span>
+
+      <h2>Oceanfront Luxury Villa</h2>
+
+      <p>
+        Palm Jumeirah, Dubai
+      </p>
+
+      <div class="property-details">
+        <div>$12.5M</div>
+        <div>5 Beds</div>
+        <div>Private Beach</div>
+      </div>
+
+      <button>View Property</button>
+
+    </div>
+
+  </section>
+
+  <!-- RECOMMENDED -->
+  <section class="dashboard-section reveal-bottom">
+
+    <div class="section-head">
+      <h2>Recommended For You</h2>
+    </div>
+
+    <div class="mini-grid">
+
+      <div class="mini-card">
+        <h4>Waterfront Villas</h4>
+        <p>18 matching listings</p>
+      </div>
+
+      <div class="mini-card">
+        <h4>Penthouses</h4>
+        <p>12 matching listings</p>
+      </div>
+
+      <div class="mini-card">
+        <h4>Investment Homes</h4>
+        <p>9 opportunities</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  
+  <!-- NOTIFICATIONS -->
+  <section class="panel">
+
+    <h2>Recent Notifications</h2>
+
+    <ul>
+      <li>🔔 New matching property available</li>
+      <li>🔔 Agent replied to your inquiry</li>
+      <li>🔔 Price drop on saved property</li>
+      <li>🔔 Upcoming virtual tour reminder</li>
+    </ul>
+
+  </section>
+
+  <!-- VIP -->
+  <section class="vip-banner">
+
+    <h2>🏆 VIP Membership</h2>
+
+    <p>
+      Unlock off-market listings, priority access,
+      private events and premium investment opportunities.
+    </p>
+
+    <button>Upgrade Membership</button>
+
+  </section>
+
+</div>
+
+</div>
+<!-- =================================================================================================== -->
+<!-- MY PORTFOLIO -->
+<div class="content" id="portfolio">
+
+<div class="explore-container">
+
+  <!-- HERO -->
+  <section class="search-hero">
+
+    <span class="hero-tag reveal-top">
+      Discover Luxury Living
+    </span>
+
+    <h1 class="reveal-left">
+      Explore Exceptional Properties
+    </h1>
+
+    <p class="reveal-right">
+      Browse handpicked luxury villas, waterfront residences,
+      penthouses, and investment opportunities across the
+      world's most desirable destinations.
+    </p>
+
+    <!-- SEARCH -->
+    <div class="search-bar reveal-bottom">
+
+      <input type="text" placeholder="Location">
+
+      <select>
+        <option>Property Type</option>
+        <option>Villa</option>
+        <option>Penthouse</option>
+        <option>Apartment</option>
+      </select>
+
+      <select>
+        <option>Budget</option>
+        <option>$500K - $1M</option>
+        <option>$1M - $5M</option>
+        <option>$5M+</option>
+      </select>
+
+      <select>
+        <option>Bedrooms</option>
+        <option>1+</option>
+        <option>2+</option>
+        <option>3+</option>
+        <option>5+</option>
+      </select>
+
+      <button class="search-btn">
+        Search
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- FILTERS -->
+  <section class="filter-section">
+
+    <div class="filter-row">
+
+      <div class="filter-chip active">All</div>
+      <div class="filter-chip">Villa</div>
+      <div class="filter-chip">Penthouse</div>
+      <div class="filter-chip">Waterfront</div>
+      <div class="filter-chip">Investment</div>
+      <div class="filter-chip">Smart Home</div>
+      <div class="filter-chip">New Launch</div>
+
+    </div>
+
+  </section>
+
+  <!-- FEATURED PROPERTY -->
+  <section class="featured-property">
+
+    <div class="featured-image reveal-left">
+
+      <img
+      src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600"
+      alt="Luxury Property">
+
+    </div>
+
+    <div class="featured-content reveal-right">
+
+      <span class="featured-label">
+        Property of the Week
+      </span>
+
+      <h2>
+        Oceanfront Luxury Villa
+      </h2>
+
+      <p class="location">
+        Palm Jumeirah, Dubai
+      </p>
+
+      <div class="property-features">
+
+        <div>5 Bedrooms</div>
+        <div>Private Beach</div>
+        <div>Infinity Pool</div>
+
+      </div>
+
+      <div class="featured-price">
+        $12.5M
+      </div>
+
+      <button>
+        View Details
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- LOCATIONS -->
+  <section class="locations-section">
+
+    <div class="section-header">
+
+      <h2 class="reveal-top">
+        Explore by Location
+      </h2>
+
+      <p class="reveal-bottom">
+        Discover opportunities in the world's most prestigious cities.
+      </p>
+
+    </div>
+
+    <div class="location-list">
+
+      <div class="location-item">Dubai</div>
+      <div class="location-item">London</div>
+      <div class="location-item">New York</div>
+      <div class="location-item">Singapore</div>
+      <div class="location-item">Paris</div>
+      <div class="location-item">Miami</div>
+
+    </div>
+
+  </section>
+
+  <!-- PROPERTY GRID -->
+  <section class="properties-section">
+
+    <div class="section-header">
+
+      <h2>
+        Featured Listings
+      </h2>
+
+      <p>
+        Curated luxury homes selected by our advisors.
+      </p>
+
+    </div>
+
+    <div class="property-grid">
+
+      <!-- CARD 1 -->
+      <div class="property-card pop-card">
+
+        <div class="property-image">
+
+          <img
+          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1000"
+          alt="">
+
+        </div>
+
+        <div class="property-content">
+
+          <h3>Modern Waterfront Villa</h3>
+
+          <p class="location">
+            Dubai Marina
+          </p>
+
+          <div class="price">
+            $8.4M
+          </div>
+
+          <div class="card-features">
+
+            <span>5 Beds</span>
+            <span>6 Baths</span>
+            <span>7200 sqft</span>
+
+          </div>
+
+          <div class="card-actions">
+
+            <button>View</button>
+            <button>Save</button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="property-card pop-card delay-1">
+
+        <div class="property-image">
+
+          <img
+          src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1000"
+          alt="">
+
+        </div>
+
+        <div class="property-content">
+
+          <h3>Skyline Penthouse</h3>
+
+          <p class="location">
+            New York
+          </p>
+
+          <div class="price">
+            $11.2M
+          </div>
+
+          <div class="card-features">
+
+            <span>4 Beds</span>
+            <span>5 Baths</span>
+            <span>6800 sqft</span>
+
+          </div>
+
+          <div class="card-actions">
+
+            <button>View</button>
+            <button>Save</button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="property-card pop-card delay-2">
+
+        <div class="property-image">
+
+          <img
+          src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1000"
+          alt="">
+
+        </div>
+
+        <div class="property-content">
+
+          <h3>Luxury Estate Residence</h3>
+
+          <p class="location">
+            London
+          </p>
+
+          <div class="price">
+            $15.8M
+          </div>
+
+          <div class="card-features">
+
+            <span>7 Beds</span>
+            <span>8 Baths</span>
+            <span>12000 sqft</span>
+
+          </div>
+
+          <div class="card-actions">
+
+            <button>View</button>
+            <button>Save</button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- MARKET INSIGHTS -->
+  <section class="market-section">
+
+    <div class="section-header">
+
+      <h2>
+        Market Snapshot
+      </h2>
+
+      <p>
+        Latest luxury real estate trends.
+      </p>
+
+    </div>
+
+    <div class="market-grid">
+
+      <div class="market-card">
+        <h3>Dubai</h3>
+        <div class="market-growth">+8.2%</div>
+      </div>
+
+      <div class="market-card">
+        <h3>London</h3>
+        <div class="market-growth">+4.6%</div>
+      </div>
+
+      <div class="market-card">
+        <h3>Singapore</h3>
+        <div class="market-growth">+6.1%</div>
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
+
+</div>
+
+<!-- ======================================================================================================== -->
+
+<!-- MARKETS MODULE -->
+<div class="content" id="markets">
+
+<div class="saved-container">
+
+  <!-- HERO -->
+  <section class="saved-hero">
+
+    <h1 class="reveal-left">
+      ❤️ Your Saved Properties
+    </h1>
+
+    <p class="reveal-right">
+      All your shortlisted luxury homes in one elegant place.
+      Compare, revisit, and take action anytime.
+    </p>
+
+  </section>
+
+  <!-- ACTION BAR -->
+  <section class="saved-actions reveal-bottom">
+
+    <input type="text" placeholder="Search saved properties...">
+
+    <select>
+      <option>Sort By</option>
+      <option>Newest</option>
+      <option>Price High to Low</option>
+      <option>Price Low to High</option>
+    </select>
+
+    <button>Compare Selected</button>
+
+  </section>
+
+  <!-- GRID -->
+  <section class="saved-grid">
+
+    <!-- CARD 1 -->
+    <div class="saved-card pop-card">
+
+      <div class="saved-image">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200">
+      </div>
+
+      <div class="saved-content">
+
+        <h3>Oceanfront Villa</h3>
+        <p class="location">Dubai Marina</p>
+
+        <div class="price">$12.5M</div>
+
+        <div class="saved-features">
+          <span>5 Beds</span>
+          <span>6 Baths</span>
+          <span>Private Beach</span>
+        </div>
+
+        <div class="saved-actions">
+          <button>View</button>
+          <button class="remove">Remove</button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="saved-card pop-card delay-1">
+
+      <div class="saved-image">
+        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200">
+      </div>
+
+      <div class="saved-content">
+
+        <h3>Skyline Penthouse</h3>
+        <p class="location">New York</p>
+
+        <div class="price">$9.8M</div>
+
+        <div class="saved-features">
+          <span>4 Beds</span>
+          <span>City View</span>
+          <span>Luxury Interior</span>
+        </div>
+
+        <div class="saved-actions">
+          <button>View</button>
+          <button class="remove">Remove</button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="saved-card pop-card delay-2">
+
+      <div class="saved-image">
+        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200">
+      </div>
+
+      <div class="saved-content">
+
+        <h3>London Estate</h3>
+        <p class="location">London</p>
+
+        <div class="price">$15.2M</div>
+
+        <div class="saved-features">
+          <span>7 Beds</span>
+          <span>Garden</span>
+          <span>Historic Design</span>
+        </div>
+
+        <div class="saved-actions">
+          <button>View</button>
+          <button class="remove">Remove</button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- EMPTY STATE (OPTIONAL) -->
+  <section class="empty-state hidden">
+
+    <h2>Nothing Saved Yet 🖤</h2>
+    <p>Start exploring luxury properties and save your favorites.</p>
+
+    <button>Explore Properties</button>
+
+  </section>
+
+</div>
+</div>
+
+<!-- ======================================================================================== -->
+
+<!-- TRANSACTION MODULE -->
+<div class="content" id="watchlist">
+
+<div class="appointment-container">
+
+  <!-- HERO -->
+  <section class="appointment-hero">
+
+    <h1 class="reveal-left">
+      📅 Your Appointments
+    </h1>
+
+    <p class="reveal-right">
+      Manage property visits, virtual tours, and private consultations
+      with your luxury real estate advisors.
+    </p>
+
+  </section>
+
+  <!-- ACTION BAR -->
+  <section class="appointment-actions reveal-bottom">
+
+    <input type="text" placeholder="Search appointments...">
+
+    <select>
+      <option>All Types</option>
+      <option>Property Visit</option>
+      <option>Virtual Tour</option>
+      <option>Agent Meeting</option>
+    </select>
+
+    <button>+ New Appointment</button>
+
+  </section>
+
+  <!-- UPCOMING APPOINTMENTS -->
+  <section class="appointment-grid">
+
+    <!-- CARD 1 -->
+    <div class="appointment-card pop-card">
+
+      <div class="appointment-top">
+
+        <span class="type">Property Visit</span>
+
+        <span class="status confirmed">Confirmed</span>
+
+      </div>
+
+      <h3>Oceanfront Villa Tour</h3>
+
+      <p class="location">Palm Jumeirah, Dubai</p>
+
+      <div class="appointment-info">
+
+        <div>
+          📅 25 June 2026
+        </div>
+
+        <div>
+          ⏰ 10:00 AM
+        </div>
+
+        <div>
+          👤 Agent: Sarah Johnson
+        </div>
+
+      </div>
+
+      <div class="appointment-actions">
+
+        <button>View Details</button>
+        <button class="cancel">Cancel</button>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="appointment-card pop-card delay-1">
+
+      <div class="appointment-top">
+
+        <span class="type">Virtual Tour</span>
+
+        <span class="status pending">Pending</span>
+
+      </div>
+
+      <h3>Skyline Penthouse Review</h3>
+
+      <p class="location">New York City</p>
+
+      <div class="appointment-info">
+
+        <div>📅 27 June 2026</div>
+        <div>⏰ 6:00 PM</div>
+        <div>👤 Agent: Michael Lee</div>
+
+      </div>
+
+      <div class="appointment-actions">
+
+        <button>Join</button>
+        <button class="cancel">Cancel</button>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="appointment-card pop-card delay-2">
+
+      <div class="appointment-top">
+
+        <span class="type">Consultation</span>
+
+        <span class="status completed">Completed</span>
+
+      </div>
+
+      <h3>Investment Planning Meeting</h3>
+
+      <p class="location">London Office</p>
+
+      <div class="appointment-info">
+
+        <div>📅 20 June 2026</div>
+        <div>⏰ 3:30 PM</div>
+        <div>👤 Advisor: David Smith</div>
+
+      </div>
+
+      <div class="appointment-actions">
+
+        <button>View Report</button>
+        <button class="remove">Delete</button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CALENDAR VIEW (OPTIONAL BLOCK) -->
+  <section class="calendar-preview">
+
+    <h2 class="reveal-top">
+      📊 Monthly Overview
+    </h2>
+
+    <div class="calendar-grid">
+
+      <div class="calendar-card">Mon</div>
+      <div class="calendar-card active">Tue</div>
+      <div class="calendar-card">Wed</div>
+      <div class="calendar-card">Thu</div>
+      <div class="calendar-card">Fri</div>
+      <div class="calendar-card">Sat</div>
+      <div class="calendar-card">Sun</div>
+
+    </div>
+
+  </section>
+
+</div>
+
+</div>
+
+<!-- PROFILE MODULE -->
+<div class="content" id="profile">
+
+<div class="profile-container">
+
+  <!-- HERO PROFILE -->
+  <section class="profile-hero">
+
+    <div class="profile-avatar reveal-left">
+      <img src="https://i.pravatar.cc/300?img=12" alt="">
+    </div>
+
+    <div class="profile-info reveal-right">
+
+      <span class="verified-badge">✔ Verified Client</span>
+
+      <h1>Welcome, <span id="userName">Sridhar</span></h1>
+
+      <p>Luxury Property Investor • Premium Member</p>
+
+      <div class="profile-actions">
+
+        <button>Edit Profile</button>
+        <button>Upgrade Plan</button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- STATS -->
+  <section class="profile-stats">
+
+    <div class="stat-card pop-card">
+      <h3>24</h3>
+      <p>Properties Viewed</p>
+    </div>
+
+    <div class="stat-card pop-card delay-1">
+      <h3>8</h3>
+      <p>Saved Homes</p>
+    </div>
+
+    <div class="stat-card pop-card delay-2">
+      <h3>3</h3>
+      <p>Active Deals</p>
+    </div>
+
+    <div class="stat-card pop-card delay-3">
+      <h3>2</h3>
+      <p>Appointments</p>
+    </div>
+
+  </section>
+
+  <!-- PROFILE DETAILS -->
+  <section class="profile-details">
+
+    <h2 class="reveal-top">Account Information</h2>
+
+    <div class="details-grid">
+
+      <div class="detail-card reveal-left">
+        <label>Full Name</label>
+        <input type="text" value="Sridhar Sri">
+      </div>
+
+      <div class="detail-card reveal-right">
+        <label>Email</label>
+        <input type="email" value="sridhar@email.com">
+      </div>
+
+      <div class="detail-card reveal-left">
+        <label>Phone</label>
+        <input type="text" value="+91 98765 43210">
+      </div>
+
+      <div class="detail-card reveal-right">
+        <label>Country</label>
+        <input type="text" value="India">
+      </div>
+
+    </div>
+
+    <button class="save-btn">Save Changes</button>
+
+  </section>
+
+  <!-- ACTIVITY TIMELINE -->
+  <section class="activity-section">
+
+    <h2 class="reveal-top">Recent Activity</h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item pop-card">
+        🔎 Viewed Oceanfront Villa - Dubai
+      </div>
+
+      <div class="timeline-item pop-card delay-1">
+        ❤️ Saved Skyline Penthouse - New York
+      </div>
+
+      <div class="timeline-item pop-card delay-2">
+        📅 Booked Property Tour - London Estate
+      </div>
+
+      <div class="timeline-item pop-card delay-3">
+        💬 Chat with Agent Sarah Johnson
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SECURITY -->
+  <section class="security-section">
+
+    <h2 class="reveal-top">Security Settings</h2>
+
+    <div class="security-card">
+
+      <div>
+        🔒 Two-Factor Authentication
+      </div>
+
+      <button>Enable</button>
+
+    </div>
+
+    <div class="security-card">
+
+      <div>
+        🔑 Change Password
+      </div>
+
+      <button>Update</button>
+
+    </div>
+
+  </section>
+
+</div>
+
+</div>
+
+<!-- SETTINGS MODULE -->
+
+<!--  -->
+
+</div>
+
+<script src="js/user-dashboard.js"></script>
+</body>
+</html>

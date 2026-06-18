@@ -1,3 +1,173 @@
+:root{
+  --bg:#0f1115;
+  --card:#171b22;
+  --gold:#c89b5a;
+  --gold-light:#dfbc84;
+  --green:#1f4d3f;
+  --text:#f8f5ef;
+  --muted:#a8adb7;
+  --border:rgba(255,255,255,.08);
+
+  --radius:24px;
+  --shadow:0 20px 60px rgba(0,0,0,.45);
+  --transition:.45s ease;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+}
+/* =========================
+   NAVBAR
+========================= */
+
+.nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  backdrop-filter:blur(18px);
+  background:rgba(15,17,21,.75);
+  border-bottom:1px solid var(--border);
+}
+
+.nav-container{
+  height:85px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo img{
+  height:55px;
+}
+
+.nav-links{
+  display:flex;
+  gap:2rem;
+}
+
+.nav-links a{
+  color:var(--text);
+  text-decoration:none;
+  font-weight:500;
+  position:relative;
+}
+
+.nav-links a::after{
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:-8px;
+  width:0;
+  height:2px;
+  background:var(--gold);
+  transition:.3s;
+}
+
+.nav-links a:hover::after{
+  width:100%;
+}
+
+.nav-actions{
+  display:flex;
+  gap:1rem;
+}
+
+.signin-btn{
+  color:var(--text);
+  text-decoration:none;
+}
+
+.tour-btn,
+.mobile-tour-btn,
+.btn--primary{
+  background:linear-gradient(135deg,var(--gold),var(--gold-light));
+  color:#111;
+  padding:.9rem 1.5rem;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:700;
+  transition:var(--transition);
+}
+
+.tour-btn:hover,
+.btn--primary:hover{
+  transform:translateY(-4px);
+}
+
+.mobile-tour-btn{
+  display:none;
+}
+
+.menu-toggle{
+  display:none;
+  background:none;
+  border:none;
+  color:white;
+  font-size:2rem;
+  cursor:pointer;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:992px){
+
+.hero__inner{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:3.5rem;
+}
+
+.cats{
+grid-template-columns:1fr;
+}
+
+.nav-links{
+position:fixed;
+top:85px;
+left:-100%;
+width:100%;
+height:calc(100vh - 85px);
+background:#111;
+flex-direction:column;
+padding:2rem;
+transition:.4s;
+}
+
+.nav-links.active{
+left:0;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.nav-actions{
+display:none;
+}
+
+.mobile-tour-btn{
+display:block;
+margin-top:1rem;
+}
+}
+
+
+/* =============================== HERO ================================= */
+
 .contact-hero{
   position:relative;
   height:100vh;
@@ -419,7 +589,7 @@
 }
 
 /* BUTTON */
-button{
+section button{
   margin-top:25px;
   width:100%;
   padding:15px;

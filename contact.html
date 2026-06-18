@@ -4,9 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/auth.css">
     <title>Document</title>
 </head>
 <body>
+
+<!-- NAVBAR -->
+<header class="nav">
+  <div class="container nav-container">
+
+    <!-- LOGO -->
+    <a href="#" class="logo">
+      <img src="images/" alt="Stackly Estates">
+    </a>
+
+    <!-- NAVIGATION -->
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="discover.html">Discover</a>
+      <a href="agents.html">Agents</a>
+      <a href="stories.html">Stories</a>
+      <a href="contact.html">Contact</a>
+
+      <!-- Mobile Only CTA -->
+      <a class="mobile-tour-btn" onclick="openPopup()">Book a Tour</a>
+    </nav>
+
+    <!-- DESKTOP ACTIONS -->
+    <div class="nav-actions">
+      <a onclick="openPopup()" class="signin-btn">Sign In</a>
+      <a onclick="openPopup()" class="tour-btn">Book a Tour</a>
+    </div>
+
+    <!-- MOBILE TOGGLE -->
+    <button class="menu-toggle" id="menuToggle">
+      ☰
+    </button>
+
+  </div>
+</header>
     
 <section class="contact-hero">
 
@@ -408,6 +444,164 @@
   </div>
 </footer>
 
+<!--  -->
+<!-- ================= AUTH POPUP ================= -->
+
+<div id="popupOverlay" class="popup-overlay">
+
+  <div class="popup-container">
+
+    <!-- CLOSE BUTTON -->
+    <span class="popup-close" onclick="closePopup()">
+      &times;
+    </span>
+
+    <!-- LEFT SIDE -->
+    <div class="popup-left">
+
+      <h1>Welcome 👋</h1>
+
+      <p>
+        Access your dashboard, analytics,
+        projects and management system.
+      </p>
+
+      <div class="popup-feature-list">
+
+        <div class="popup-feature-card">
+          📊 Real-time Analytics
+        </div>
+
+        <div class="popup-feature-card">
+          ⚡ Fast Dashboard
+        </div>
+
+        <div class="popup-feature-card">
+          🔒 Secure Authentication
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="popup-right">
+
+      <!-- LOGIN -->
+      <div id="loginForm" class="popup-login-box">
+
+        <h2>Login</h2>
+
+        <span>
+          Access your account
+        </span>
+
+        <input
+          id="loginEmail"
+          type="email"
+          placeholder="Enter Email"
+        >
+
+        <div class="password-wrap">
+            <input id="loginPassword" type="password" placeholder="Enter Password">
+            <span class="eye-btn" onclick="togglePassword('loginPassword',this)">👁</span>
+        </div>
+        <small id="passwordHint" class="hint-text"> </small>
+
+        <!-- FORGOT PASSWORD -->
+        <p class="popup-forgot">
+          <a href="error.html" onclick="forgotPassword()">Forgot Password?</a>
+        </p>
+
+        <select id="loginRole">
+
+          <option value="user">
+            User
+          </option>
+
+          <option value="admin">
+            Admin
+          </option>
+
+        </select>
+
+        <button onclick="login()">
+          Login
+        </button>
+
+        <p class="popup-switch">
+
+          Don't have an account?
+
+          <span onclick="showSignup()">
+            Signup
+          </span>
+
+        </p>
+
+      </div>
+
+      <!-- SIGNUP -->
+       <!-- ================= SIGNUP FORM ================= -->
+<div id="signupForm" class="popup-signup-box hidden">
+
+  <h2 class="signup-h2">Create Account</h2>
+  <span>Create your new account</span>
+
+  <!-- ROLE SELECTION (AVATAR STYLE) -->
+  <div class="role-selector">
+
+    <div id="userRoleCard" class="role-card active" onclick="selectRole('user')">
+      <div class="avatar">👤</div>
+      <p>User</p>
+    </div>
+
+    <div id="adminRoleCard" class="role-card" onclick="selectRole('admin')">
+      <div class="avatar">🛡️</div>
+      <p>Admin</p>
+    </div>
+
+  </div>
+
+  <!-- INPUTS -->
+  <input id="signupName" type="text" placeholder="Enter Name">
+  <input id="signupEmail" type="email" placeholder="Enter Email">
+  <div class="password-wrap">
+    <input id="signupPassword" type="password" placeholder="Enter Password">
+    <span class="eye-btn" onclick="togglePassword('signupPassword',this)">👁</span>
+  </div>
+  <div class="password-wrap">
+    <input id="signupConfirmPassword" type="password" placeholder="Confirm Password">
+    <span class="eye-btn" onclick="togglePassword('signupConfirmPassword',this)">👁</span>
+  </div>
+
+  <!-- HIDDEN ROLE -->
+  <select id="signupRole" style="display:none;">
+    <option value="user">User</option>
+    <option value="admin">Admin</option>
+  </select>
+
+  <!-- ERROR MESSAGE -->
+  <p id="signupError" class="error-text"></p>
+
+  <!-- BUTTON -->
+  <button onclick="signup()">Create Account</button>
+
+  <!-- SWITCH -->
+  <p class="popup-switch signup-login">
+    Already have an account?
+    <span onclick="showLogin()">Login</span>
+  </p>
+
+</div>
+
+    </div>
+
+  </div>
+
+</div>
+
 <script src="js/contact.js"></script>
+<script src="js/auth.js"></script>
 </body>
 </html>

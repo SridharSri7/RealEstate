@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="css/admin-dashboard.css">
+</head>
+
+<body>
+
+<div class="sidebar admin">
+
+    <h2>Admin Panel</h2>
+
+    <a href="#" onclick="showSection('dashboard')">Dashboard</a>
+    <a href="#" onclick="showSection('users')">Propert Management</a>
+    <a href="#" onclick="showSection('trades')">User Management</a>
+    <!-- <a href="#" onclick="showSection('risk')">Risk Engine</a> -->
+    <a href="#" onclick="showSection('logs')">System Logs</a>
+    <a href="#" onclick="showSection('analytics')">Analytics</a>
+
+    <button class="logout-btn" onclick="logout()">
+        <span>🚪</span> Logout
+    </button>
+    
+</div>
+
+<!-- ======== -->
+
+<div class="main">
+
+    <h1>Admin Control Center ⚙️</h1>
+
+
+    <!-- DASHBOARD -->
+<div class="content active" id="dashboard">
+
+<div class="admin-overview">
+
+  <!-- HERO WELCOME -->
+  <section class="admin-hero">
+
+    <div class="hero-left reveal-left">
+
+      <span class="tag">ADMIN CONTROL CENTER</span>
+
+      <h1>Welcome Back, Admin 👑</h1>
+
+      <p>
+        Manage properties, users, agents, and system performance
+        from your luxury real estate control dashboard.
+      </p>
+
+      <div class="hero-actions">
+
+        <button>+ Add Property</button>
+        <button>View Reports</button>
+
+      </div>
+
+    </div>
+
+    <div class="hero-right reveal-right">
+
+      <div class="system-card pop-card">
+        <h3>System Health</h3>
+        <p>All systems running smoothly</p>
+      </div>
+
+      <div class="system-card pop-card delay-1">
+        <h3>Security Status</h3>
+        <p>High Level Protection Active</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- KPI STATS -->
+  <section class="kpi-grid">
+
+    <div class="kpi-card pop-card">
+      <h2>1,248</h2>
+      <p>Total Users</p>
+    </div>
+
+    <div class="kpi-card pop-card delay-1">
+      <h2>86</h2>
+      <p>Active Agents</p>
+    </div>
+
+    <div class="kpi-card pop-card delay-2">
+      <h2>312</h2>
+      <p>Properties Listed</p>
+    </div>
+
+    <div class="kpi-card pop-card delay-3">
+      <h2>$4.2M</h2>
+      <p>Revenue Generated</p>
+    </div>
+
+  </section>
+
+  <!-- QUICK ACTIONS -->
+  <section class="quick-panel">
+
+    <h2 class="reveal-top">Quick Actions</h2>
+
+    <div class="action-grid">
+
+      <button class="action-card pop-card">🏠 Add Property</button>
+      <button class="action-card pop-card delay-1">👥 Manage Users</button>
+      <button class="action-card pop-card delay-2">🧑‍💼 Assign Agents</button>
+      <button class="action-card pop-card delay-3">📅 View Appointments</button>
+      <button class="action-card pop-card delay-4">💰 Finance Report</button>
+      <button class="action-card pop-card">📊 Analytics</button>
+
+    </div>
+
+  </section>
+
+  <!-- RECENT ACTIVITY -->
+  <section class="activity-panel">
+
+    <h2 class="reveal-top">Recent System Activity</h2>
+
+    <div class="activity-list">
+
+      <div class="activity-item pop-card">
+        🏠 New property added: Ocean Villa Dubai
+      </div>
+
+      <div class="activity-item pop-card delay-1">
+        👤 New user registered: Premium Client
+      </div>
+
+      <div class="activity-item pop-card delay-2">
+        💰 Payment received: $25,000 commission
+      </div>
+
+      <div class="activity-item pop-card delay-3">
+        📅 Appointment approved by admin
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
+
+</div>
+
+<!-- USERS -->
+<div class="content" id="users">
+
+<div class="property-module">
+
+  <!-- HERO -->
+  <section class="pm-hero">
+
+    <div class="pm-left reveal-left">
+
+      <span class="tag">PROPERTY CONTROL</span>
+
+      <h1>Manage Luxury Listings 🏠</h1>
+
+      <p>
+        Add, edit, approve, or remove premium properties.
+        Control visibility and featured listings from one place.
+      </p>
+
+      <div class="pm-actions">
+
+        <button onclick="openAddProperty()">+ Add Property</button>
+        <button>Pending Approvals</button>
+        <button>Featured Listings</button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FILTER BAR -->
+  <section class="pm-filters reveal-top">
+
+    <input type="text" placeholder="Search property name, location...">
+
+    <select>
+      <option>All Status</option>
+      <option>Active</option>
+      <option>Pending</option>
+      <option>Sold</option>
+    </select>
+
+    <select>
+      <option>All Types</option>
+      <option>Villa</option>
+      <option>Apartment</option>
+      <option>Penthouse</option>
+    </select>
+
+    <button>Filter</button>
+
+  </section>
+
+  <!-- PROPERTY GRID -->
+  <section class="pm-grid">
+
+    <div class="pm-card pop-card">
+
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" />
+
+      <div class="pm-content">
+
+        <h3>Oceanfront Luxury Villa</h3>
+        <p>Dubai Marina, UAE</p>
+
+        <div class="pm-price">$2,450,000</div>
+
+        <div class="pm-status active">Active</div>
+
+        <div class="pm-buttons">
+
+          <button>Edit</button>
+          <button>Feature</button>
+          <button class="danger">Delete</button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="pm-card pop-card delay-1">
+
+      <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d" />
+
+      <div class="pm-content">
+
+        <h3>Skyline Penthouse</h3>
+        <p>New York, USA</p>
+
+        <div class="pm-price">$3,100,000</div>
+
+        <div class="pm-status pending">Pending</div>
+
+        <div class="pm-buttons">
+
+          <button>Approve</button>
+          <button>Edit</button>
+          <button class="danger">Reject</button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="pm-card pop-card delay-2">
+
+      <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea" />
+
+      <div class="pm-content">
+
+        <h3>Modern Glass Villa</h3>
+        <p>London, UK</p>
+
+        <div class="pm-price">$1,890,000</div>
+
+        <div class="pm-status sold">Sold</div>
+
+        <div class="pm-buttons">
+
+          <button>View</button>
+          <button>Archive</button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
+
+</div>
+
+
+<!-- TRADES -->
+<div class="content" id="trades">
+
+<div class="user-module">
+
+  <!-- HERO -->
+  <section class="um-hero">
+
+    <div class="um-left reveal-left">
+
+      <span class="tag">USER CONTROL CENTER</span>
+
+      <h1>Manage Platform Users 👥</h1>
+
+      <p>
+        View, verify, block, or assign roles to all users in the luxury real estate platform.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- FILTER BAR -->
+  <section class="um-filters reveal-top">
+
+    <input type="text" placeholder="Search user name or email...">
+
+    <select>
+      <option>All Roles</option>
+      <option>User</option>
+      <option>Agent</option>
+      <option>Admin</option>
+    </select>
+
+    <select>
+      <option>All Status</option>
+      <option>Active</option>
+      <option>Blocked</option>
+      <option>Pending</option>
+    </select>
+
+    <button>Search</button>
+
+  </section>
+
+  <!-- USER TABLE -->
+  <section class="um-table pop-card">
+
+    <table>
+
+      <thead>
+        <tr>
+          <th>User</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Status</th>
+          <th>Joined</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <td>
+            <div class="user-info">
+              <img src="https://i.pravatar.cc/50?img=12">
+              <span>Rahul Sharma</span>
+            </div>
+          </td>
+
+          <td>rahul@example.com</td>
+
+          <td><span class="role user">User</span></td>
+
+          <td><span class="status active">Active</span></td>
+
+          <td>12 Jan 2026</td>
+
+          <td>
+            <button class="btn view">View</button>
+            <button class="btn block">Block</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="user-info">
+              <img src="https://i.pravatar.cc/50?img=32">
+              <span>Priya Nair</span>
+            </div>
+          </td>
+
+          <td>priya@example.com</td>
+
+          <td><span class="role agent">Agent</span></td>
+
+          <td><span class="status pending">Pending</span></td>
+
+          <td>05 Feb 2026</td>
+
+          <td>
+            <button class="btn approve">Approve</button>
+            <button class="btn block">Block</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="user-info">
+              <img src="https://i.pravatar.cc/50?img=5">
+              <span>Admin Team</span>
+            </div>
+          </td>
+
+          <td>admin@luxury.com</td>
+
+          <td><span class="role admin">Admin</span></td>
+
+          <td><span class="status active">Active</span></td>
+
+          <td>01 Jan 2026</td>
+
+          <td>
+            <button class="btn view">View</button>
+          </td>
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </section>
+
+</div>
+
+</div>
+
+<!-- NOTIFICATION -->
+<div class="content" id="logs">
+
+<div class="notification-module">
+
+  <!-- HERO -->
+  <section class="nt-hero">
+
+    <div class="nt-left reveal-left">
+
+      <span class="tag">SYSTEM ALERTS</span>
+
+      <h1>Notifications Center 🔔</h1>
+
+      <p>
+        Monitor all system activities, user actions, payments,
+        property updates, and security alerts in real time.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- FILTER BAR -->
+  <section class="nt-filters reveal-top">
+
+    <select>
+      <option>All Notifications</option>
+      <option>Users</option>
+      <option>Properties</option>
+      <option>Payments</option>
+      <option>System</option>
+    </select>
+
+    <select>
+      <option>All Priority</option>
+      <option>High</option>
+      <option>Medium</option>
+      <option>Low</option>
+    </select>
+
+    <button>Mark All Read</button>
+
+  </section>
+
+  <!-- NOTIFICATION LIST -->
+  <section class="nt-list">
+
+    <div class="nt-card pop-card">
+
+      <div class="nt-icon">🏠</div>
+
+      <div class="nt-content">
+        <h3>New Property Submitted</h3>
+        <p>Ocean Villa Dubai has been added for approval</p>
+        <span class="time">2 mins ago</span>
+      </div>
+
+      <span class="badge high">High</span>
+
+    </div>
+
+    <div class="nt-card pop-card delay-1">
+
+      <div class="nt-icon">👤</div>
+
+      <div class="nt-content">
+        <h3>New User Registered</h3>
+        <p>Premium client account created successfully</p>
+        <span class="time">10 mins ago</span>
+      </div>
+
+      <span class="badge medium">Medium</span>
+
+    </div>
+
+    <div class="nt-card pop-card delay-2">
+
+      <div class="nt-icon">💰</div>
+
+      <div class="nt-content">
+        <h3>Payment Received</h3>
+        <p>$25,000 commission transferred successfully</p>
+        <span class="time">1 hour ago</span>
+      </div>
+
+      <span class="badge high">High</span>
+
+    </div>
+
+    <div class="nt-card pop-card delay-3">
+
+      <div class="nt-icon">🔐</div>
+
+      <div class="nt-content">
+        <h3>Security Login Alert</h3>
+        <p>New login detected from Chennai, India</p>
+        <span class="time">3 hours ago</span>
+      </div>
+
+      <span class="badge low">Low</span>
+
+    </div>
+
+  </section>
+
+</div>
+    
+</div>
+
+<!-- ANALYTICS -->
+<div class="content" id="analytics">
+
+<div class="analytics-module">
+
+  <!-- HERO -->
+  <section class="an-hero">
+
+    <div class="an-left reveal-left">
+
+      <span class="tag">ANALYTICS ENGINE</span>
+
+      <h1>Performance Insights 📊</h1>
+
+      <p>
+        Track property performance, user engagement, revenue trends,
+        and platform growth in real time.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- KPI ROW -->
+  <section class="an-kpis">
+
+    <div class="an-card pop-card">
+      <h2>128K</h2>
+      <p>Property Views</p>
+    </div>
+
+    <div class="an-card pop-card delay-1">
+      <h2>8.4K</h2>
+      <p>Active Users</p>
+    </div>
+
+    <div class="an-card pop-card delay-2">
+      <h2>1,240</h2>
+      <p>Bookings</p>
+    </div>
+
+    <div class="an-card pop-card delay-3">
+      <h2>$5.6M</h2>
+      <p>Revenue</p>
+    </div>
+
+  </section>
+
+  <!-- CHART SECTION -->
+  <section class="an-charts">
+
+    <div class="chart-box reveal-top">
+
+      <h3>Revenue Growth</h3>
+
+      <div class="chart-placeholder">
+        📈 Line Chart Placeholder
+      </div>
+
+    </div>
+
+    <div class="chart-box reveal-right">
+
+      <h3>User Engagement</h3>
+
+      <div class="chart-placeholder">
+        📊 Bar Chart Placeholder
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PERFORMANCE INSIGHTS -->
+  <section class="an-insights">
+
+    <h2 class="reveal-left">Top Insights</h2>
+
+    <div class="insight-grid">
+
+      <div class="insight-card pop-card">
+        🏠 Luxury villas get 62% more views than apartments
+      </div>
+
+      <div class="insight-card pop-card delay-1">
+        📍 Dubai & London are top-performing locations
+      </div>
+
+      <div class="insight-card pop-card delay-2">
+        💰 Premium listings convert 3.8x faster
+      </div>
+
+      <div class="insight-card pop-card delay-3">
+        👥 Mobile users dominate traffic (72%)
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
+
+</div>
+<!--  -->
+
+</div>
+
+<script src="js/admin-dashboard.js"></script>
+</body>
+</html>

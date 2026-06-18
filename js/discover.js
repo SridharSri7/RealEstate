@@ -18,3 +18,21 @@ items.forEach(el=>{
 });
 
 // ============== 
+/* MOBILE MENU */
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+
+  navLinks.classList.toggle("active");
+
+  if(navLinks.classList.contains("active")){
+      document.body.style.overflow = "hidden";
+      menuToggle.innerHTML = "✕";
+  }else{
+      document.body.style.overflow = "";
+      menuToggle.innerHTML = "☰";
+  }
+
+});

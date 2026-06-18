@@ -1,190 +1,168 @@
-// OPEN
 
+// =================== LOGIN & SIGNUP =====================
+// OPEN POPUP
 function openPopup(){
-  document
-  .getElementById("popupOverlay")
-  .classList.add("active");
-
-  document.body.style.overflow="hidden";
+    document
+    .getElementById("popupOverlay")
+    .classList.add("active");
 }
 
-// CLOSE
-
+// CLOSE POPUP
 function closePopup(){
-  document
-  .getElementById("popupOverlay")
-  .classList.remove("active");
-
-  document.body.style.overflow="auto";
+    document
+    .getElementById("popupOverlay")
+    .classList.remove("active");
 }
 
-// SWITCH FORMS
-
+// LOGIN -> SIGNUP
 function showSignup(){
-  loginForm.classList.add("hidden");
-  signupForm.classList.remove("hidden");
+    document
+    .getElementById("loginForm")
+    .classList.add("hidden");
+
+    document
+    .getElementById("signupForm")
+    .classList.remove("hidden");
 }
 
+// SIGNUP -> LOGIN
 function showLogin(){
-  signupForm.classList.add("hidden");
-  loginForm.classList.remove("hidden");
+    document
+    .getElementById("signupForm")
+    .classList.add("hidden");
+
+    document
+    .getElementById("loginForm")
+    .classList.remove("hidden");
 }
 
-// PASSWORD TOGGLE
+// PASSWORD EYE
+function togglePassword(id,icon){
 
-function togglePassword(id,btn){
+    const input = document.getElementById(id);
 
-  const input=document.getElementById(id);
-
-  if(input.type==="password"){
-    input.type="text";
-    btn.innerHTML="🙈";
-  }else{
-    input.type="password";
-    btn.innerHTML="👁";
-  }
+    if(input.type === "password"){
+        input.type = "text";
+        icon.innerHTML = "👁";
+    }
+    else{
+        input.type = "password";
+        icon.innerHTML = "👁";
+    }
 }
 
 // ROLE SELECTOR
-
 function selectRole(role){
 
- document
- .getElementById("signupRole")
- .value=role;
+    document.getElementById("signupRole").value = role;
 
- document
- .querySelectorAll(".role-card")
- .forEach(card=>{
- card.classList.remove("active");
- });
+    document
+    .querySelectorAll(".role-card")
+    .forEach(card=>card.classList.remove("active"));
 
- if(role==="user"){
-   userRoleCard.classList.add("active");
- }else{
-   adminRoleCard.classList.add("active");
- }
+    if(role==="user"){
+        document
+        .getElementById("userRoleCard")
+        .classList.add("active");
+    }
+    else{
+        document
+        .getElementById("adminRoleCard")
+        .classList.add("active");
+    }
 }
 
 // PASSWORD VALIDATION
+const signupPassword =
+document.getElementById("signupPassword");
 
-function validPassword(password){
+const hint =
+document.getElementById("passwordHint");
 
- const regex=
- /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&.#])[A-Za-z\d@$!%*?&.#]{8,}$/;
+if(signupPassword){
 
- return regex.test(password);
+signupPassword.addEventListener("input",()=>{
+
+    const value = signupPassword.value;
+
+    const strongPassword =
+    /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&]).{8,}$/;
+
+    if(strongPassword.test(value)){
+        hint.innerHTML =
+        "✓ Strong password";
+
+        hint.className =
+        "hint-text valid";
+    }
+    else{
+        hint.innerHTML =
+        "Password must contain 8+ chars, letter, number & symbol";
+
+        hint.className =
+        "hint-text invalid";
+    }
+
+});
 }
 
-// SIGNUP
-
-function signup(){
-
- const name=
- document.getElementById("signupName").value.trim();
-
- const email=
- document.getElementById("signupEmail").value.trim();
-
- const password=
- document.getElementById("signupPassword").value;
-
- const confirm=
- document.getElementById("signupConfirmPassword").value;
-
- const role=
- document.getElementById("signupRole").value;
-
- const error=
- document.getElementById("signupError");
-
- error.innerHTML="";
-
- if(!validPassword(password)){
-   error.innerHTML=
-   "Password must contain 8+ chars, uppercase, lowercase, number and symbol.";
-   return;
- }
-
- if(password!==confirm){
-   error.innerHTML=
-   "Passwords do not match.";
-   return;
- }
-
- const users=
- JSON.parse(localStorage.getItem("users")) || [];
-
- const exists=
- users.find(u=>u.email===email);
-
- if(exists){
-   error.innerHTML=
-   "Email already registered.";
-   return;
- }
-
- users.push({
-   name,
-   email,
-   password,
-   role
- });
-
- localStorage.setItem(
- "users",
- JSON.stringify(users)
- );
-
- alert("Signup Successful");
-
- showLogin();
-}
-
-// LOGIN
-
+// SAMPLE LOGIN
 function login(){
 
- const email=
- document.getElementById("loginEmail").value.trim();
+    const email = document.getElementById("loginEmail").value;
+    const pass = document.getElementById("loginPassword").value;
+    const role = document.getElementById("loginRole").value;
 
- const password=
- document.getElementById("loginPassword").value;
+    if(!email || !pass){
+        alert("Please fill all fields");
+        return;
+    }
 
- const role=
- document.getElementById("loginRole").value;
+    // store session
+    localStorage.setItem("userRole", role);
+    localStorage.setItem("userEmail", email);
 
- const users=
- JSON.parse(localStorage.getItem("users")) || [];
-
- const user=
- users.find(
- u =>
- u.email===email &&
- u.password===password &&
- u.role===role
- );
-
- if(!user){
-   alert("Invalid Credentials");
-   return;
- }
-
- localStorage.setItem(
- "loggedUser",
- JSON.stringify(user)
- );
-
- localStorage.setItem(
- "role",
- user.role
- );
-
- // REDIRECT
-
- if(user.role==="admin"){
-   window.location.href="admin-dashboard.html";
- }else{
-   window.location.href="user-dashboard.html";
- }
+    // redirect based on role
+    if(role === "admin"){
+        window.location.href = "admin-dashboard.html";
+    } else {
+        window.location.href = "user-dashboard.html";
+    }
 }
+
+// SAMPLE SIGNUP
+function signup(){
+
+    const password =
+    document.getElementById("signupPassword").value;
+
+    const confirm =
+    document.getElementById("signupConfirmPassword").value;
+
+    const strongPassword =
+    /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&]).{8,}$/;
+
+    if(!strongPassword.test(password)){
+        alert("Password not strong enough");
+        return;
+    }
+
+    if(password !== confirm){
+        alert("Passwords do not match");
+        return;
+    }
+
+    alert("Account Created Successfully");
+}
+
+// CLOSE WHEN CLICK OUTSIDE
+window.addEventListener("click",(e)=>{
+
+    const overlay =
+    document.getElementById("popupOverlay");
+
+    if(e.target === overlay){
+        closePopup();
+    }
+
+});
