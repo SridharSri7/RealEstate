@@ -1,3 +1,18 @@
+:root{
+  --bg-dark: #0f172a;        /* deep navy */
+  --bg-card: #171b22;       /* dashboard cards */
+  --bg-popup: #1e1b18;      /* warm dark brown */
+  
+  --text-primary: #ffffff;
+  --text-secondary: #b8c0cc;
+  --text-muted: #6b7280;
+
+  --accent-gold: #c9a46a;
+  --accent-hover: #e0c28a;
+
+  --border: rgba(255,255,255,0.08);
+}
+
 /* OVERLAY */
 
 .popup-overlay{
@@ -153,7 +168,7 @@
 
 .popup-login-box span,
 .popup-signup-box span{
-  color:#64748b;
+  color:#eeeff2;
   margin-bottom:20px;
 }
 
@@ -192,6 +207,13 @@
 
 .password-wrap{
   position:relative;
+}
+
+.password-wrap input{
+  margin: 0;
+}
+#loginPassword{
+  margin: 0;
 }
 
 .eye-btn{
@@ -268,7 +290,7 @@
 .hint-text{
   display:block;
   margin-bottom:15px;
-  color:#64748b;
+  color:#000000;
 }
 
 .hidden{
@@ -332,7 +354,7 @@
 
 .popup-login-box span,
 .popup-signup-box span{
-    color:#9ca3af;
+    color:#d3def0;
     display:block;
     margin-bottom:25px;
 }
@@ -373,4 +395,102 @@
 
     box-shadow:
     0 0 0 4px rgba(201,164,106,.12);
+}
+
+.popup-forgot a{
+  text-decoration: none;
+  color: wheat;
+  font-size: 13px;
+}
+
+/* --- */
+/* ================= REMEMBER ME ================= */
+
+.remember-me{
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.remember-label{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #b8c0cc;
+  cursor: pointer;
+}
+
+/* SMALL CHECKBOX */
+.remember-label input[type="checkbox"]{
+  width: 14px;
+  height: 14px;
+  accent-color: #c9a46a; /* gold theme */
+  cursor: pointer;
+}
+
+.remember-me{
+  margin: 10px 0;
+}
+
+.remember-label{
+  display: inline-flex;
+  align-items: center;   /* 👈 key fix */
+  gap: 8px;
+  font-size: 13px;
+  color: #b8c0cc;
+  cursor: pointer;
+  line-height: 1;        /* 👈 prevents vertical misalignment */
+}
+
+/* small checkbox */
+.remember-label input[type="checkbox"]{
+  width: 14px;
+  height: 14px;
+  margin: 0;             /* 👈 removes default browser offset */
+  accent-color: #c9a46a;
+  flex-shrink: 0;
+}
+
+input::placeholder{
+  color:white;
+}
+
+/* ======== COLOR GRADING ======== */
+.popup-right input,
+.popup-right select{
+  color: var(--text-primary); /* FIX */
+}
+
+.popup-right input::placeholder{
+  color: var(--text-muted);
+}
+
+.popup-right{
+  background: linear-gradient(
+    145deg,
+    #1e1b18,
+    #2a221c
+  );
+}
+
+
+.popup-right button{
+  background: var(--accent-gold);
+  color: #111;
+  font-weight: 600;
+}
+
+.popup-right button:hover{
+  background: var(--accent-hover);
+}
+
+.popup-right input,
+.popup-right select{
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.03);
+}
+
+.remember-label{
+  color: var(--text-secondary);
 }

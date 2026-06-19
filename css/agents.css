@@ -1424,3 +1424,36 @@ margin-top:1rem;
     font-size:1.3rem;
   }
 }
+
+/* ======================= toggle menu ========================= */
+
+@media(max-width:992px){
+
+.nav-links{
+  position: fixed;
+  top: 85px;
+  right: -320px;      /* hidden */
+  left: auto;
+  width: 280px;       /* SMALL PANEL */
+  height: auto;       /* NOT FULL SCREEN */
+  max-height: 60vh;
+  background: rgba(17,17,17,.95);
+  flex-direction: column;
+  padding: 1.5rem;
+  gap: 1.2rem;
+  border-left: 1px solid var(--border);
+  border-radius: 12px 0 0 12px;
+  transition: .4s ease;
+  overflow-y: auto;
+}
+
+.nav-links.active{
+  right: 0;           /* slide in */
+}
+}
+
+html.no-scroll,
+body.no-scroll{
+  overflow: hidden;
+  height: 100%;
+}

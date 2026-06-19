@@ -1862,3 +1862,117 @@ select, option {
   color: #fff;
   background: #1e1e1e;
 }
+
+/* ========================================== */
+/* ================================
+   ULTRA MOBILE FIX (FINAL OVERRIDE)
+================================ */
+
+@media (max-width: 768px) {
+
+body {
+  flex-direction: column;
+}
+
+/* SIDEBAR BECOMES TOP BAR */
+.sidebar {
+  width: 100%;
+  height: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.sidebar a {
+  padding: 8px 10px;
+  font-size: 13px;
+}
+
+.sidebar-logo {
+  width: 100%;
+  padding: 10px 0;
+}
+
+/* MAIN CONTENT */
+.main {
+  padding: 15px;
+}
+
+/* GRID FIXES */
+.stats-grid,
+.mini-grid,
+.market-grid,
+.profile-stats {
+  grid-template-columns: 1fr !important;
+}
+
+.property-grid,
+.saved-grid,
+.appointment-grid {
+  grid-template-columns: 1fr !important;
+}
+
+/* FEATURED SECTION */
+.featured-property {
+  grid-template-columns: 1fr !important;
+}
+
+/* HERO PADDING REDUCE */
+.search-hero,
+.saved-hero,
+.appointment-hero,
+.profile-hero,
+.welcome-banner {
+  padding: 20px !important;
+}
+
+/* TEXT SCALE DOWN */
+.search-hero h1 {
+  font-size: 2rem;
+}
+
+.welcome-banner h1,
+.saved-hero h1,
+.appointment-hero h1,
+.profile-info h1 {
+  font-size: 1.6rem;
+}
+
+/* SEARCH BAR STACK */
+.search-bar {
+  grid-template-columns: 1fr !important;
+}
+
+/* ACTION BARS STACK */
+.saved-actions,
+.appointment-actions {
+  grid-template-columns: 1fr !important;
+}
+
+/* PROFILE */
+.profile-hero {
+  flex-direction: column;
+  text-align: center;
+}
+
+.profile-avatar img {
+  width: 100px;
+  height: 100px;
+}
+
+/* BUTTON TOUCH FIX */
+button {
+  min-height: 44px;
+}
+
+/* PREVENT OVERFLOW */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+}

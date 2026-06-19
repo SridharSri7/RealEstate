@@ -7,16 +7,13 @@ menuToggle.addEventListener("click", () => {
 
   navLinks.classList.toggle("active");
 
-  if(navLinks.classList.contains("active")){
-      document.body.style.overflow = "hidden";
-      menuToggle.innerHTML = "✕";
-  }else{
-      document.body.style.overflow = "";
-      menuToggle.innerHTML = "☰";
-  }
+  const isOpen = navLinks.classList.contains("active");
 
+  document.documentElement.classList.toggle("no-scroll", isOpen);
+  document.body.classList.toggle("no-scroll", isOpen);
+
+  menuToggle.innerHTML = isOpen ? "✕" : "☰";
 });
-
 
 /* SCROLL REVEAL */
 
