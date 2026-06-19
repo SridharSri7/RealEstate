@@ -316,24 +316,24 @@ body{
   background-position:center;
 }
 
-.cat--1 .cat__img{
-  background-image:url('/images/img12.webp');
+.cat__img.cat--1{
+  background-image:url('../images/img12.webp');
 }
 
-.cat--2 .cat__img{
-  background-image:url('/images/img13.webp');
+.cat__img.cat--2{
+  background-image:url('../images/img13.webp');
 }
 
-.cat--3 .cat__img{
-  background-image:url('/images/img5.webp');
+.cat__img.cat--3{
+  background-image:url('../images/img5.webp');
 }
 
-.cat--4 .cat__img{
-  background-image:url('/images/img6.webp');
+.cat__img.cat--4{
+  background-image:url('../images/img6.webp');
 }
 
-.cat--5 .cat__img{
-  background-image:url('/images/img3.webp');
+.cat__img.cat--5{
+  background-image:url('../images/img3.webp');
 }
 
 .cat__body{
