@@ -1486,3 +1486,17 @@ body.no-scroll{
   accent-color: #c9a46a;
   flex-shrink: 0;
 }
+
+/* FIX OPTION VISIBILITY */
+.map-filters select{
+  color: #fff;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.map-filters option{
+  color: #fff;
+  background: #171b22;
+}
