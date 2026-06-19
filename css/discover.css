@@ -183,7 +183,7 @@ margin-top:1rem;
 .hero-bg{
   position:absolute;
   inset:0;
-  background:url("/images/img6.webp") center/cover no-repeat;
+  background:url("images/img6.webp") center/cover no-repeat;
   transform:scale(1.1);
 }
 
