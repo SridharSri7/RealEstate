@@ -417,7 +417,7 @@ margin-top:1rem;
 }
 
 /* BUTTON */
-.lux-btn{
+.map-wrapper .lux-btn{
   margin-top:20px;
   width:100%;
   padding:12px;
@@ -428,7 +428,7 @@ margin-top:1rem;
   cursor:pointer;
 }
 
-.lux-btn:hover{
+.map-wrapper .lux-btn:hover{
   background:#c9a46a;
   color:#0f1115;
 }
