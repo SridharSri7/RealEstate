@@ -1181,3 +1181,227 @@ margin-top:1rem;
     text-align:center;
   }
 }
+
+/* ==========================================
+   MOBILE RESPONSIVE FIX
+   Discover Page
+========================================== */
+
+@media screen and (max-width:768px){
+
+  body{
+    overflow-x:hidden;
+  }
+
+  .container{
+    width:92%;
+  }
+
+  /* NAVBAR */
+  /* .nav-container{
+    height:75px;
+  }
+
+  .logo img{
+    height:42px;
+  }
+
+  .menu-toggle{
+    display:block;
+    font-size:1.8rem;
+  } */
+
+  /* .nav-links{
+    position:fixed;
+    top:75px;
+    left:-100%;
+    width:100%;
+    height:calc(100vh - 75px);
+    background:#0f1115;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    padding:2rem;
+    gap:1.5rem;
+    transition:.4s ease;
+    overflow-y:auto;
+  }
+
+  .nav-links.active{
+    left:0;
+  }
+
+  .nav-actions{
+    display:none;
+  } */
+
+  /* .mobile-tour-btn{
+    display:block;
+    width:100%;
+    text-align:center;
+  } */
+
+  /* HERO */
+  .discover-hero{
+    min-height:100vh;
+    padding-top:100px;
+    padding-bottom:60px;
+    height:auto;
+  }
+
+  .hero-content{
+    text-align:center;
+  }
+
+  .hero-content h1{
+    font-size:2.3rem;
+  }
+
+  .hero-content p{
+    font-size:.95rem;
+  }
+
+  .search-box{
+    flex-direction:column;
+    border-radius:20px;
+  }
+
+  .search-box button{
+    width:100%;
+  }
+
+  .chips{
+    justify-content:center;
+  }
+
+  /* MAP */
+
+  .smart-map{
+    padding:80px 0;
+  }
+
+  .map-wrapper{
+    grid-template-columns:1fr;
+  }
+
+  .map-area{
+    height:350px;
+  }
+
+  .map-popup{
+    width:90%;
+    right:5%;
+    bottom:15px;
+  }
+
+  /* TRENDING */
+
+  .trend-grid{
+    grid-template-columns:1fr;
+  }
+
+  .trend-card img{
+    height:220px;
+  }
+
+  /* LIFESTYLE */
+
+  .life-grid{
+    grid-template-columns:1fr;
+  }
+
+  .life-card img{
+    height:220px;
+  }
+
+  /* FEATURED CITIES */
+
+  .city-row,
+  .city-row.reverse{
+    grid-template-columns:1fr;
+    gap:20px;
+    margin-bottom:50px;
+  }
+
+  .city-row.reverse .city-img,
+  .city-row.reverse .city-info{
+    order:unset;
+  }
+
+  .city-img img{
+    height:250px;
+  }
+
+  .city-info h3{
+    font-size:1.6rem;
+  }
+
+  /* FOOTER */
+
+  .footer-cta h2{
+    font-size:2rem;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+    gap:30px;
+    text-align:center;
+  }
+
+  .icons{
+    justify-content:center;
+  }
+
+  .newsletter-box{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .newsletter-box input,
+  .newsletter-box button{
+    width:100%;
+    max-width:350px;
+  }
+
+  .footer-bottom{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .bottom-links{
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+}
+
+
+/* EXTRA SMALL DEVICES */
+
+@media screen and (max-width:480px){
+
+  .hero-content h1{
+    font-size:1.9rem;
+  }
+
+  .section-title h2{
+    font-size:1.8rem;
+  }
+
+  .trend-content h3,
+  .life-content h3{
+    font-size:1.05rem;
+  }
+
+  .city-info h3{
+    font-size:1.4rem;
+  }
+
+  .map-area{
+    height:300px;
+  }
+
+  .map-popup{
+    width:95%;
+    right:2.5%;
+  }
+}

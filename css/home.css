@@ -1358,3 +1358,269 @@ margin-top:1rem;
     text-align:center;
   }
 }
+
+
+/*=========================== */
+/* ==========================================
+   GLOBAL RESPONSIVE FIXES
+========================================== */
+
+*{
+  box-sizing:border-box;
+}
+
+html,
+body{
+  overflow-x:hidden;
+}
+
+/* ==========================================
+   TABLETS
+========================================== */
+
+@media (max-width:1024px){
+
+  .sidebar{
+    width:220px;
+  }
+
+  .main{
+    padding:20px;
+  }
+
+  .card-grid,
+  .stats-grid,
+  .profile-stats{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .market-grid,
+  .split-grid,
+  .details-grid,
+  .an-charts{
+    grid-template-columns:1fr;
+  }
+
+  .featured-property,
+  .profile-hero{
+    grid-template-columns:1fr;
+    flex-direction:column;
+  }
+
+}
+
+/* ==========================================
+   MOBILE SIDEBAR + CONTENT
+========================================== */
+
+@media (max-width:768px){
+
+  body{
+    flex-direction:column;
+  }
+
+  .sidebar{
+    width:100%;
+    height:auto;
+    padding:15px;
+    gap:8px;
+    position:relative;
+    border-right:none;
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+
+  .sidebar-logo img{
+    width:90px;
+  }
+
+  .sidebar a{
+    padding:12px;
+    font-size:14px;
+  }
+
+  .main{
+    width:100%;
+    padding:15px;
+  }
+
+  /* DASHBOARD */
+
+  .stats-grid,
+  .card-grid,
+  .mini-grid,
+  .profile-stats,
+  .market-grid,
+  .insight-grid,
+  .an-kpis{
+    grid-template-columns:1fr;
+  }
+
+  .featured-property,
+  .split-grid,
+  .details-grid{
+    grid-template-columns:1fr;
+  }
+
+  .welcome-banner{
+    flex-direction:column;
+    align-items:flex-start;
+    padding:25px;
+  }
+
+  .quick-actions{
+    width:100%;
+    flex-direction:column;
+  }
+
+  .quick-actions button{
+    width:100%;
+  }
+
+  /* PROFILE */
+
+  .profile-hero{
+    flex-direction:column;
+    text-align:center;
+    padding:30px 20px;
+  }
+
+  .profile-avatar img{
+    width:120px;
+    height:120px;
+  }
+
+  .profile-actions{
+    flex-direction:column;
+    width:100%;
+  }
+
+  .profile-actions button{
+    width:100%;
+  }
+
+  /* SEARCH */
+
+  .search-bar{
+    grid-template-columns:1fr;
+  }
+
+  .search-hero{
+    padding:25px;
+  }
+
+  .search-hero h1{
+    font-size:2rem;
+  }
+
+  /* SAVED */
+
+  .saved-grid{
+    grid-template-columns:1fr;
+  }
+
+  /* APPOINTMENTS */
+
+  .appointment-grid{
+    grid-template-columns:1fr;
+  }
+
+  .calendar-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  /* ANALYTICS */
+
+  .an-charts{
+    grid-template-columns:1fr;
+  }
+
+  .chart-placeholder{
+    height:180px;
+  }
+
+}
+
+/* ==========================================
+   SMALL PHONES
+========================================== */
+
+@media (max-width:480px){
+
+  .main{
+    padding:12px;
+  }
+
+  .welcome-banner,
+  .saved-hero,
+  .appointment-hero,
+  .search-hero,
+  .profile-hero,
+  .an-hero{
+    padding:20px;
+  }
+
+  .welcome-banner h1,
+  .search-hero h1,
+  .profile-info h1,
+  .an-hero h1{
+    font-size:1.8rem;
+    line-height:1.2;
+  }
+
+  .featured-content{
+    padding:20px;
+  }
+
+  .featured-content h2{
+    font-size:1.5rem;
+  }
+
+  .property-details,
+  .property-features,
+  .saved-features,
+  .card-features{
+    gap:8px;
+  }
+
+  .property-details div,
+  .property-features div,
+  .saved-features span,
+  .card-features span{
+    font-size:12px;
+    padding:8px 10px;
+  }
+
+  .profile-details,
+  .activity-section,
+  .panel,
+  .calendar-preview{
+    padding:20px;
+  }
+
+  .stat-card h3,
+  .an-card h2{
+    font-size:1.6rem;
+  }
+
+  .calendar-grid{
+    grid-template-columns:1fr;
+  }
+
+  .appointment-top{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .appointment-actions,
+  .saved-actions,
+  .card-actions{
+    flex-direction:column;
+  }
+
+  .appointment-actions button,
+  .saved-actions button,
+  .card-actions button{
+    width:100%;
+  }
+
+}
