@@ -1856,3 +1856,9 @@ input[type="range"]{
 
     transition:.3s;
 }
+
+/* ============== */
+select, option {
+  color: #fff;
+  background: #1e1e1e;
+}

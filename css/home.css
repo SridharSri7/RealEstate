@@ -219,9 +219,8 @@ body{
 }
 
 .hero__card-img{
-  height:340px;
-  background:url('images/img5.webp')
-  center/cover;
+  height: 340px;
+  background: url('/images/img5.webp') center/cover;
 }
 
 .hero__card-body{
