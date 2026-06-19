@@ -220,7 +220,7 @@ body{
 
 .hero__card-img{
   height:340px;
-  background:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80')
+  background:url('/images/ANI-20230324084320.webp')
   center/cover;
 }
 
@@ -317,23 +317,23 @@ body{
 }
 
 .cat--1 .cat__img{
-  background-image:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85');
+  background-image:url('/images/img12.webp');
 }
 
 .cat--2 .cat__img{
-  background-image:url('https://images.unsplash.com/photo-1494526585095-c41746248156');
+  background-image:url('/images/img13.webp');
 }
 
 .cat--3 .cat__img{
-  background-image:url('https://images.unsplash.com/photo-1568605114967-8130f3a36994');
+  background-image:url('/images/img5.webp');
 }
 
 .cat--4 .cat__img{
-  background-image:url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750');
+  background-image:url('/images/img6.webp');
 }
 
 .cat--5 .cat__img{
-  background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
+  background-image:url('/images/img3.webp');
 }
 
 .cat__body{
