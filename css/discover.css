@@ -448,7 +448,7 @@ margin-top:1rem;
 .map-bg{
   position:absolute;
   inset:0;
-  background-image:url("/images/map.jpg");
+  background-image:url("/images/map.webp");
   background-size:cover;
   background-position:center;
   filter:brightness(0.75) contrast(1.1) saturate(1.1);
