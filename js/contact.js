@@ -63,3 +63,16 @@ menuToggle.addEventListener("click", () => {
 
   menuToggle.innerHTML = isOpen ? "✕" : "☰";
 });
+
+
+// ==============================
+const nameInput = document.getElementById("fullName");
+const phoneInput = document.getElementById("phoneNumber");
+
+nameInput.addEventListener("input", () => {
+  nameInput.value = nameInput.value.replace(/[^a-zA-Z\s]/g, '');
+});
+
+phoneInput.addEventListener("input", () => {
+  phoneInput.value = phoneInput.value.replace(/[^0-9]/g, '');
+});

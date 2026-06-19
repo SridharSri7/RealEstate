@@ -406,55 +406,6 @@
 /* --- */
 /* ================= REMEMBER ME ================= */
 
-.remember-me{
-  margin: 10px 0;
-  display: flex;
-  align-items: center;
-}
-
-.remember-label{
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 13px;
-  color: #b8c0cc;
-  cursor: pointer;
-}
-
-/* SMALL CHECKBOX */
-.remember-label input[type="checkbox"]{
-  width: 14px;
-  height: 14px;
-  accent-color: #c9a46a; /* gold theme */
-  cursor: pointer;
-}
-
-.remember-me{
-  margin: 10px 0;
-}
-
-.remember-label{
-  display: inline-flex;
-  align-items: center;   /* 👈 key fix */
-  gap: 8px;
-  font-size: 13px;
-  color: #b8c0cc;
-  cursor: pointer;
-  line-height: 1;        /* 👈 prevents vertical misalignment */
-}
-
-/* small checkbox */
-.remember-label input[type="checkbox"]{
-  width: 14px;
-  height: 14px;
-  margin: 0;             /* 👈 removes default browser offset */
-  accent-color: #c9a46a;
-  flex-shrink: 0;
-}
-
-input::placeholder{
-  color:white;
-}
 
 /* ======== COLOR GRADING ======== */
 .popup-right input,
@@ -493,4 +444,77 @@ input::placeholder{
 
 .remember-label{
   color: var(--text-secondary);
+}
+
+/* ============= FINAL ============ */
+/* PASSWORD FIELD */
+.password-wrap{
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.password-wrap input{
+  width: 100%;
+  margin: 0;
+}
+
+.eye-btn{
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #b8c0cc;
+}
+
+/* REMEMBER + FORGOT ROW */
+.login-options{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0 18px;
+  width: 100%;
+}
+
+/* REMEMBER ME */
+.remember-label{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #b8c0cc;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.remember-label input[type="checkbox"]{
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  accent-color: #c9a46a;
+  cursor: pointer;
+}
+
+/* FORGOT PASSWORD */
+.popup-forgot{
+  margin: 0;
+}
+
+.popup-forgot a{
+  color: #c9a46a;
+  text-decoration: none;
+  font-size: 14px;
+  transition: .3s;
+}
+
+.popup-forgot a:hover{
+  color: #e0c28a;
+}
+
+/* MOBILE */
+@media(max-width:480px){
+  .login-options{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 }
